@@ -1,0 +1,37 @@
+
+server:
+  port: 9057
+
+spring:
+  profiles: default
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: integration-companhias
+  logging:
+    level:
+      root: INFO
+  redis:
+    cache:
+      type: redis
+    host: localhost
+    port: 6379
+
+#VARIAVEIS DE AMBIENTE
+client:  ${CLIENT:800056a1-9c44-47a5-b679-2ce7f3e20aab}
+secret:
+  client: ${SECRET_CLEINT:122f8b8d-69db-4bfe-a8d1-dde2d16df18c}
+projuris:
+  url:
+    authenticate: ${URL_AUTHENTICATE:http://projuris-dev.integracao.localhost:8080/api/auth-service/authenticate}
+    entidade: ${URL_entidade:http://projures-dev.localhost:8080/api/entidade/pageable}
+
+
+
+
+
+
+
+
+
